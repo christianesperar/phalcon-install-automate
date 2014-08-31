@@ -15,11 +15,11 @@ cd cphalcon/build
 echo "Installing....."
 sudo ./install
 
-echo "Add extension....."
-echo -e "\nextension=phalcon.so" >> /etc/php5/apache2/php.ini
+echo "Adding extension....."
+sleep 5
+echo "extension=phalcon.so" > /etc/php5/apache2/conf.d/30-phalcon.ini
 
 echo "Restarting Apache....."
 sudo service apache2 restart
 
-echo "extension=phalcon.so" > /etc/php5/apache2/conf.d/30-phalcon.ini
 echo "Phalcon installation successful"
